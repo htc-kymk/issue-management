@@ -1,5 +1,6 @@
 package com.htckymk.issue_management.util;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
 
@@ -20,6 +21,7 @@ public class TPage<T>{
        this.totalPages=page.getTotalPages();
        this.totalElements=page.getTotalElements();
        this.content=list;
+
 
    }
 }

@@ -5,12 +5,15 @@ import com.htckymk.issue_management.entity.Issue;
 import com.htckymk.issue_management.repository.IssueRepository;
 import com.htckymk.issue_management.service.IssueService;
 import com.htckymk.issue_management.util.TPage;
+import jakarta.persistence.Id;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 
+@Service
 public class IssueServiceImpl implements IssueService {
 
     private final IssueRepository issueRepository;
@@ -34,8 +37,9 @@ public class IssueServiceImpl implements IssueService {
 
     @Override
     public IssueDto getById(Long id) {
-        return null;
-    }
+        Issue issue=issueRepository.getOne(id);
+        return modelMapper.map(issue,IssueDto.class);}
+
 
     @Override
     public TPage<IssueDto> getAllPageable(Pageable pageable) {
@@ -47,7 +51,13 @@ public class IssueServiceImpl implements IssueService {
     }
 
     @Override
-    public Boolean delete(IssueDto issue) {
+    public Boolean delete(Long issueId) {
+        issueRepository.deleteById(issueId);
+        return true;
+    }
+
+    @Override
+    public IssueDto update(Long id, IssueDto project) {
         return null;
     }
 }

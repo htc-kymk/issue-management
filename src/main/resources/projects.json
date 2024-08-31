@@ -1,0 +1,19 @@
+/*
+[
+{
+  "_class": "com.htckymk.issue_management.entity.Project",
+  "projectCode": "IM",
+  "projectName": "Issue Management Project"
+},
+{
+  "_class": "com.htckymk.issue_management.entity.Project",
+  "projectCode": "ERP-S",
+  "projectName": "ERP Project for Sales"
+},
+ {
+    "_class": "com.htckymk.issue_management.entity.Project",
+    "projectCode": "CRM-S",
+    "projectName": "CRM-S Project for Sales"
+ }
+
+]*/

@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
         return user;}
     @Override
     public User getById(Long id) {
-        return userRepository.getReferenceById(id);}
+        return userRepository.getOne(id);}
     @Override
     public Page<User> getAllPageable(Pageable pageable) {
         return userRepository.findAll(pageable);}
