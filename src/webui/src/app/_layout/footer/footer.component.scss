@@ -3,16 +3,15 @@
   padding: 15px;
   position: relative;
 }
-
 @media screen and (max-width: 992px) {
   .footer {
-    margin-left: 0px !important;
+    margin-left: 0px !important;}
+}
+@media print {
+  .footer {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
   }
 }
 
-@media print {
-  .footer {
-    margin-top: 0px !important;
-    margin-left: 0px !important;
-  }
-}
+

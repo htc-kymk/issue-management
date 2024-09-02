@@ -23,23 +23,15 @@ export class HeaderComponent implements OnInit {
       }
     });
   }
-
-  ngOnInit() {
-
-  }
-
-
+  ngOnInit() {}
   isToggled(): boolean {
     const dom = document.querySelector('aside') as HTMLElement | null;
     return (dom) ? dom.classList.contains(this.collapseClass) : false;
   }
-
   toggleSidebar() {
     const dom: any = document.querySelector('aside');
     (dom)?dom.classList.toggle(this.collapseClass):'';
     const cdom: any = document.querySelector('#main-container');
     (cdom)?cdom.classList.toggle(this.collapseClass):'';
   }
-
-
 }
